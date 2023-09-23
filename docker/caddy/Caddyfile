@@ -1,0 +1,10 @@
+localhost {
+    tls internal
+    root * /var/www/public
+    php_fastcgi php:9000 {
+        root /var/www/public
+    }
+    file_server
+    encode gzip
+    log
+}
